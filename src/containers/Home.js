@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Countries Quiz</h1>
+      <h1 style={{ textAlign: "center" }}>Countries Quiz</h1>
       {!loading && <Learn data={data} />}
     </>
   );

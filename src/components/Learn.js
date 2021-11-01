@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Button from "@mui/material/Button";
+import "./learn.scss";
 
 const Learn = (data) => {
   const [allCountries, setAllCountries] = useState();
@@ -32,10 +34,10 @@ const Learn = (data) => {
   };
 
   return (
-    <div>
+    <div className="learn">
       <h2>Learn</h2>
       {currentCountry && (
-        <div>
+        <div className="country-container">
           <p>
             Country: {currentCountry.name} {currentCountry.emoji}
           </p>
@@ -43,13 +45,16 @@ const Learn = (data) => {
           <p>Currency: {currentCountry.currency}</p>
           <p>Continent: {currentCountry.continent.name}</p>
           <p>Languages: {currentCountry.languagesAsString}</p>
-          <button
+
+          <Button
             onClick={() => {
               resetCountry();
             }}
+            variant="contained"
+            color="primary"
           >
             NEXT
-          </button>
+          </Button>
         </div>
       )}
     </div>
