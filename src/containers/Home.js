@@ -1,20 +1,32 @@
 import React, { useState } from "react";
+import Learn from "../components/Learn";
 import { gql, useQuery } from "@apollo/client";
 
 const GET_COUNTRIES = gql`
-  query {
+  {
     countries {
       name
+      code
+      capital
+      currency
+      emoji
+      languages {
+        name
+      }
+      continent {
+        name
+      }
     }
   }
 `;
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_COUNTRIES);
-  console.log(data);
+
   return (
     <>
       <h1>Countries Quiz</h1>
+      {!loading && <Learn data={data} />}
     </>
   );
 };
