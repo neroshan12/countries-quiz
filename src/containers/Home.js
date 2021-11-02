@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Learn from "../components/Learn";
 import { gql, useQuery } from "@apollo/client";
+import "./Home.scss";
 
 const GET_COUNTRIES = gql`
   {

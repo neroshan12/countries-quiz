@@ -1,10 +1,30 @@
 .country-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 5%;
+  border-radius: 5px;
+  background-color: #4b5358;
+
+  button {
+    margin-top: 5%;
+    width: 50%;
+    background-color: #104547;
+    color: #d2d6ef;
+    &:hover {
+      background-color: #af929d !important;
+      color: #104547 !important;
+    }
+  }
 }
 
 .learn {
-  margin-right: 30%;
-  margin-left: 30%;
   text-align: center;
+  color: #d2d6ef;
+
+  p {
+    color: #d2d6ef;
+  }
 }

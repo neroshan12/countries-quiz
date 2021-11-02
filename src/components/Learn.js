@@ -35,7 +35,7 @@ const Learn = (data) => {
 
   return (
     <div className="learn">
-      <h2>Learn</h2>
+      <h2>LEARN</h2>
       {currentCountry && (
         <div className="country-container">
           <p>
@@ -44,7 +44,7 @@ const Learn = (data) => {
           <p>Capital: {currentCountry.capital}</p>
           <p>Currency: {currentCountry.currency}</p>
           <p>Continent: {currentCountry.continent.name}</p>
-          <p>Languages: {currentCountry.languagesAsString}</p>
+          <p>Language(s): {currentCountry.languagesAsString}</p>
 
           <Button
             onClick={() => {
