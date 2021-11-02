@@ -6,7 +6,7 @@
   margin-left: 20%;
   padding: 5%;
   border-radius: 5px;
-  background-color: #4b5358;
+  background-color: #647077;
 
   button {
     margin-top: 5%;
@@ -24,7 +24,23 @@
   text-align: center;
   color: #d2d6ef;
 
-  p {
+  .content-container {
     color: #d2d6ef;
+    background-color: #727072;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin-bottom: 5%;
+  }
+
+  h3 {
+    font-size: 35px;
+  }
+
+  .keys {
+    font-size: 9px;
+    color: #0a0a0a;
+    font-weight: 700;
+    margin-bottom: 0px;
   }
 }

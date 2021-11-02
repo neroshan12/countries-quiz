@@ -38,13 +38,26 @@ const Learn = (data) => {
       <h2>LEARN</h2>
       {currentCountry && (
         <div className="country-container">
-          <p>
-            Country: {currentCountry.name} {currentCountry.emoji}
-          </p>
-          <p>Capital: {currentCountry.capital}</p>
-          <p>Currency: {currentCountry.currency}</p>
-          <p>Continent: {currentCountry.continent.name}</p>
-          <p>Language(s): {currentCountry.languagesAsString}</p>
+          <h3>
+            {currentCountry.emoji} {currentCountry.name.toUpperCase()}{" "}
+            {currentCountry.emoji}
+          </h3>
+          <div className="content-container">
+            {currentCountry.capital}
+            <p className="keys">CAPITAL</p>
+          </div>
+          <div className="content-container">
+            {currentCountry.currency}
+            <p className="keys">CURRENCY</p>
+          </div>
+          <div className="content-container">
+            {currentCountry.continent.name}
+            <p className="keys">CONTINENT</p>
+          </div>
+          <div className="content-container">
+            {currentCountry.languagesAsString}
+            <p className="keys">LANGUAGE(S)</p>
+          </div>
 
           <Button
             onClick={() => {
