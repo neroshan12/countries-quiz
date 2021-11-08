@@ -42,19 +42,19 @@ const Learn = (data) => {
             {currentCountry.emoji}
           </h3>
           <div className="content-container">
-            {currentCountry.capital}
+            {currentCountry.capital || "N/A"}
             <p className="keys">CAPITAL</p>
           </div>
           <div className="content-container">
-            {currentCountry.currency}
+            {currentCountry.currency || "N/A"}
             <p className="keys">CURRENCY</p>
           </div>
           <div className="content-container">
-            {currentCountry.continent.name}
+            {currentCountry.continent.name || "N/A"}
             <p className="keys">CONTINENT</p>
           </div>
           <div className="content-container">
-            {currentCountry.languagesAsString}
+            {currentCountry.languagesAsString || "N/A"}
             <p className="keys">LANGUAGE(S)</p>
           </div>
 
