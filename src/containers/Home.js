@@ -27,7 +27,9 @@ const Home = () => {
 
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Countries Quiz</h1>
+      <header>
+        <h1 style={{ textAlign: "center" }}>Countries Quiz</h1>
+      </header>
       {loading && (
         <Box
           sx={{ display: "flex", justifyContent: "center", height: "100vh" }}

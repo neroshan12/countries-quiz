@@ -1,48 +1,68 @@
+$elephant-green: #104547;
+$periwinkle-grey: #d2d6ef;
+
 .App {
   text-align: center;
-  background-color: #104547;
+  background-color: $elephant-green;
+}
+
+body {
+  background-color: $elephant-green;
 }
 
 h1 {
-  color: #d2d6ef;
+  color: $periwinkle-grey;
 }
 
 .country-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-bottom: 20%;
-  padding: 5%;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+  padding: 1.4rem;
   border-radius: 5px;
   background-color: #647077;
+
+  @media (min-width: 600px) {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  @media (min-width: 900px) {
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
 
   button {
     margin-top: 5%;
     width: 50%;
-    background-color: #104547;
-    color: #d2d6ef;
+    background-color: $elephant-green;
+    color: $periwinkle-grey;
     &:hover {
       background-color: #af929d !important;
-      color: #104547 !important;
+      color: $elephant-green !important;
     }
   }
 }
 
 .learn {
   text-align: center;
-  color: #d2d6ef;
+  color: $periwinkle-grey;
   padding-bottom: 20%;
 
   .content-container {
-    color: #d2d6ef;
+    color: $periwinkle-grey;
     background-color: #727072;
     padding: 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 100%;
     margin-bottom: 5%;
     font-size: 18px;
+
+    @media (min-width: 600px) {
+      width: 50%;
+    }
   }
 
   h3 {
