@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
-import "./learn.scss";
 
 const Learn = (data) => {
   const [allCountries, setAllCountries] = useState();

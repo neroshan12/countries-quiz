@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Learn from "../components/Learn";
 import { gql, useQuery } from "@apollo/client";
-import "./Home.scss";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
