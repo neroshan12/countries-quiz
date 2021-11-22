@@ -10,12 +10,24 @@ body {
   background-color: $elephant-green;
 }
 
-h1 {
+h1,
+h2 {
   color: $periwinkle-grey;
 }
 
 h3 {
   margin-top: 0rem;
+}
+
+p {
+  color: $periwinkle-grey;
+}
+
+input {
+  width: 15rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .country-container {
@@ -43,6 +55,7 @@ h3 {
     width: 50%;
     background-color: $elephant-green;
     color: $periwinkle-grey;
+
     &:hover {
       background-color: #af929d !important;
       color: $elephant-green !important;
@@ -78,5 +91,26 @@ h3 {
     color: #0a0a0a;
     font-weight: 700;
     margin-bottom: 0px;
+  }
+}
+
+.button-holder {
+  button {
+    padding-right: 0.5rem;
+    svg {
+      height: 0.8rem !important;
+    }
+  }
+}
+
+.cta {
+  button {
+    font-size: 20px;
+    font-weight: 300;
+    background-color: $elephant-green;
+    border: none;
+    color: $periwinkle-grey;
+    margin-right: 5rem;
+    margin-left: 5rem;
   }
 }

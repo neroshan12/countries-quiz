@@ -4,6 +4,7 @@ import Quiz from "../components/Quiz";
 import { gql, useQuery } from "@apollo/client";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 const GET_COUNTRIES = gql`
   {
@@ -37,7 +38,6 @@ const Home = () => {
 
   const changeTab = (page) => {
     setCurrentPage(page);
-    console.log(page);
   };
 
   return (
@@ -53,8 +53,25 @@ const Home = () => {
           <CircularProgress />
         </Box>
       )}
-      <button onClick={() => changeTab("learn")}>LEARN</button>
-      <button onClick={() => changeTab("quiz")}>QUIZ</button>
+
+      <div className="cta">
+        <Button
+          variant="contained"
+          color="primary"
+          className="cta"
+          onClick={() => changeTab("learn")}
+        >
+          LEARN
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          className="cta"
+          onClick={() => changeTab("quiz")}
+        >
+          QUIZ
+        </Button>
+      </div>
 
       {!loading && currentPage === "learn" && <Learn data={data} />}
       {!loading && currentPage === "quiz" && <Quiz data={data} />}
