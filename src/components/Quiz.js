@@ -18,7 +18,7 @@ const Quiz = (data) => {
       renderedCountry.languagesAsString = languages.join(", ");
       setCurrentCountry(renderedCountry);
     }
-  }, [allCountries]);
+  }, [allCountries, data]);
 
   console.log(currentCountry);
 

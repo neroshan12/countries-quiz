@@ -19,7 +19,7 @@ const Learn = (data) => {
       renderedCountry.languagesAsString = languages.join(", ");
       setCurrentCountry(renderedCountry);
     }
-  }, [allCountries]);
+  }, [allCountries, data]);
 
   const resetCountry = () => {
     let currentCountry =

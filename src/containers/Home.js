@@ -4,7 +4,6 @@ import Quiz from "../components/Quiz";
 import { gql, useQuery } from "@apollo/client";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 
 const GET_COUNTRIES = gql`
   {
@@ -34,7 +33,7 @@ const Home = () => {
       const { countries } = data;
       setAllCountries(countries);
     }
-  }, [allCountries]);
+  }, [allCountries, data]);
 
   const changeTab = (page) => {
     setCurrentPage(page);
@@ -59,6 +58,7 @@ const Home = () => {
 
       {!loading && currentPage === "learn" && <Learn data={data} />}
       {!loading && currentPage === "quiz" && <Quiz data={data} />}
+      {error && <p>Sorry there is currently no data available</p>}
     </>
   );
 };
