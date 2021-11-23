@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const Learn = (data) => {
+const Learn = ({ data, changeTab }) => {
   const [allCountries, setAllCountries] = useState();
   const [currentCountry, setCurrentCountry] = useState();
 
   useEffect(() => {
     if (data) {
-      const { countries } = data.data;
+      const { countries } = data;
       setAllCountries(countries);
       let totalCountries = [...countries];
       let currentCountry =
@@ -35,7 +35,6 @@ const Learn = (data) => {
 
   return (
     <div className="learn">
-      <h2>LEARN</h2>
       {currentCountry && (
         <div className="country-container">
           <h3>
@@ -70,6 +69,14 @@ const Learn = (data) => {
           </Button>
         </div>
       )}
+
+      <Button
+        className="page-button"
+        variant="contained"
+        onClick={() => changeTab()}
+      >
+        Quiz
+      </Button>
     </div>
   );
 };

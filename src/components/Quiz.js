@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const Quiz = (data) => {
+const Quiz = ({ data, changeTab }) => {
   const [allCountries, setAllCountries] = useState();
   const [currentCountry, setCurrentCountry] = useState();
   const [capital, setCapital] = useState("");
@@ -11,7 +11,7 @@ const Quiz = (data) => {
 
   useEffect(() => {
     if (data) {
-      const { countries } = data.data;
+      const { countries } = data;
       setAllCountries(countries);
       let totalCountries = [...countries];
       let currentCountry =
@@ -60,9 +60,12 @@ const Quiz = (data) => {
 
   return (
     <>
-      <h2>QUIZ</h2>
       {allCountries && (
-        <form action="/action" onSubmit={(event) => handleSubmit(event, true)}>
+        <form
+          className="form"
+          action="/action"
+          onSubmit={(event) => handleSubmit(event, true)}
+        >
           <p>What is the capital of {currentCountry.name}?</p>
           <input
             onInput={(event) => setCapital(event.target.value)}
@@ -97,6 +100,13 @@ const Quiz = (data) => {
           NEXT <ArrowForwardIosIcon />
         </Button>
       </div>
+      <Button
+        variant="contained"
+        className="page-button"
+        onClick={() => changeTab()}
+      >
+        Learn
+      </Button>
     </>
   );
 };

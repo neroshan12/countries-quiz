@@ -72,6 +72,13 @@ input {
   color: $periwinkle-grey;
   padding-bottom: 20%;
 
+  .page-button {
+    margin-top: 5%;
+    width: 50%;
+    color: $elephant-green;
+    background-color: $periwinkle-grey;
+  }
+
   .content-container {
     color: $periwinkle-grey;
     background-color: #727072;
@@ -101,6 +108,8 @@ input {
 .button-holder {
   button {
     padding-right: 0.5rem;
+    color: $elephant-green !important;
+    background-color: $periwinkle-grey !important;
     svg {
       height: 0.8rem !important;
     }
@@ -168,4 +177,18 @@ input {
   border-top: 1px solid $periwinkle-grey;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+}
+
+.page-button {
+  margin-top: 5% !important;
+  width: 50% !important;
+  color: $elephant-green !important;
+  background-color: $periwinkle-grey !important;
+}
+
+.form {
+  button {
+    color: $elephant-green !important;
+    background-color: $periwinkle-grey !important;
+  }
 }

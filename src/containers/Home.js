@@ -124,8 +124,12 @@ const Home = () => {
         </Box>
       )}
 
-      {!loading && currentPage === "learn" && <Learn data={data} />}
-      {!loading && currentPage === "quiz" && <Quiz data={data} />}
+      {!loading && currentPage === "learn" && (
+        <Learn changeTab={() => changeTab("quiz")} data={data} />
+      )}
+      {!loading && currentPage === "quiz" && (
+        <Quiz changeTab={() => changeTab("learn")} data={data} />
+      )}
       {error && <p>Sorry there is currently no data available</p>}
     </>
   );
