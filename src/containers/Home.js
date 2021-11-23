@@ -68,7 +68,6 @@ const Home = () => {
           <Button
             variant="contained"
             color="primary"
-            className="cta-button"
             onClick={() => changeTab("learn")}
           >
             <div className="cta-holder">
@@ -91,7 +90,6 @@ const Home = () => {
           <Button
             variant="contained"
             color="primary"
-            className="cta-button"
             onClick={() => changeTab("quiz")}
           >
             <div className="cta-holder">

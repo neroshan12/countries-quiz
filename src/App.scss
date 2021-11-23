@@ -120,16 +120,22 @@ input {
   display: flex;
   flex-direction: column;
   background: none;
-
-  button {
-    color: $periwinkle-grey;
-    background-color: $elephant-green;
-  }
+  color: red;
 
   button:first-child {
     margin-bottom: 1rem;
     color: $periwinkle-grey;
     background-color: $elephant-green;
+  }
+
+  button {
+    color: $periwinkle-grey;
+    background-color: $elephant-green;
+
+    &:hover {
+      background-color: #af929d !important;
+      color: $elephant-green !important;
+    }
   }
 }
 
