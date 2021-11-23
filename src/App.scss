@@ -56,6 +56,10 @@ input {
     background-color: $elephant-green;
     color: $periwinkle-grey;
 
+    svg {
+      height: 0.8rem !important;
+    }
+
     &:hover {
       background-color: #af929d !important;
       color: $elephant-green !important;
@@ -103,14 +107,65 @@ input {
   }
 }
 
+.modal-holder {
+  display: flex;
+  flex-direction: column;
+  background: none;
+
+  button {
+    color: $periwinkle-grey;
+    background-color: $elephant-green;
+  }
+
+  button:first-child {
+    margin-bottom: 1rem;
+    color: $periwinkle-grey;
+    background-color: $elephant-green;
+  }
+}
+
+.modal-home {
+  background-color: $elephant-green;
+
+  // button {
+  //   background-color: $periwinkle-grey !important;
+  //   color: $elephant-green;
+  // }
+}
+
+.cta-holder {
+  svg {
+    margin-left: 0.5rem;
+  }
+}
 .cta {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // padding-top: 30%;
+  // padding-bottom: 30%;
+
+  button:first-child {
+    margin-bottom: 1rem;
+  }
+
   button {
     font-size: 20px;
     font-weight: 300;
+    color: $periwinkle-grey;
     background-color: $elephant-green;
     border: none;
-    color: $periwinkle-grey;
-    margin-right: 5rem;
-    margin-left: 5rem;
+
+    &:hover {
+      background-color: #af929d !important;
+      color: $elephant-green !important;
+    }
   }
+}
+
+.modal-text {
+  text-transform: lowercase;
+  border-top: 1px solid $periwinkle-grey;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }

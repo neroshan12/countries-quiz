@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Learn = (data) => {
   const [allCountries, setAllCountries] = useState();
@@ -65,7 +66,7 @@ const Learn = (data) => {
             variant="contained"
             color="primary"
           >
-            NEXT
+            NEXT <ArrowForwardIosIcon />
           </Button>
         </div>
       )}
